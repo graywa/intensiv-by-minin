@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: #111 url('https://www.stalker2.com/img/back.2a11c555.jpg')
+    no-repeat;
+  background-size: cover;
+  height: 95vh;
+}
+* {
+  box-sizing: border-box;
+}
+.title img {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  opacity: 0.8;
+}
+.content {
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+.slide {
+  position: relative;
+  height: 70vh;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.876);
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.slide:hover {
+  background-position: 51% center;
+}
+.slide.active:hover {
+  cursor: default;
+  background-position: center;
+}
+.slide h3 {
+  font-weight: 100;
+  text-shadow: #000 0 0 2px;
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+.slide.active {
+  flex: 15;
+}
+.slide.active h3 {
+  opacity: 1;
+  transition: 2s;
+}
+.footer {
+  color: rgba(255, 255, 255, 0.781);
+  text-shadow: #000 2px 2px 4px;
+  text-align: right;
+  text-transform: uppercase;
+  margin: 20px;
+  padding: 5px 20px;
+  font-size: 24px;
+  background-image: linear-gradient(
+    to left,
+    rgba(245, 167, 0, 0.246),
+    rgba(245, 229, 0, 0) 30%
+  );
+  border-radius: 5px;
+}
